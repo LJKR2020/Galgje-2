@@ -1,5 +1,18 @@
 function displayWordSoFar(word, guesses) {
-  // WRITE ME
+  const letterArray = word.split("");
+  let output = "";
+
+  for (let i = 0; i < letterArray.length; i++) {
+    const letterInWord = letterArray[i];
+    const letterGuessed = guesses.includes(letterInWord);
+    if (!letterGuessed) {
+      output = output + "_ ";
+    }
+    if (letterGuessed) {
+      output = output + letterInWord + " ";
+    }
+  }
+  return output;
 }
 
 function isGameWon(word, guesses) {
