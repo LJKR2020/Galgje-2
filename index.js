@@ -13,6 +13,11 @@ function game(word, guesses) {
     console.log("Gefeliciteerd! Je hebt gewonnen ^_^");
   return
   }
+  const gameLost = isGameLost(word, guesses);
+  if (gameLost) {
+    console.log("Helaas, je hebt verloren -.-'");
+    return
+  }
 
   // voeg de geraden letter toe aan de array met guesses
   guesses.push(letter);
