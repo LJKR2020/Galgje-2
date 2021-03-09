@@ -8,6 +8,12 @@ function game(word, guesses) {
   console.log(WordSoFar);
   const letter = question("Raad een letter: ");
 
+  const gameWon = isGameWon(word, guesses);
+  if (gameWon) {
+    console.log("Gefeliciteerd! Je hebt gewonnen ^_^");
+  return
+  }
+
   // voeg de geraden letter toe aan de array met guesses
   guesses.push(letter);
 
