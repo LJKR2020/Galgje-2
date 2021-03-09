@@ -53,8 +53,8 @@ function isGameLost(word, guesses) {
   //     return false
   //   }
   for (let i = 0; i < guesses.length; i++) {
-    if (guesses != letterArray) {count = count + 1}
-    console.log(guesses, count)
+    if (guesses[i] != letterArray) {count = count + 1}
+    console.log("guess: ", guesses[i], "count: ", count)
   }
   if (count === 7) {
     return true;
