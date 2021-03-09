@@ -36,7 +36,30 @@ function isGameWon(word, guesses) {
 }
 
 function isGameLost(word, guesses) {
-  // WRITE ME
+  // console.log("Woord: ", word, "Guesses: ", guesses);
+  const letterArray = word.split("");
+  // console.log("letterArray: ", letterArray);
+  let count = 0;
+  // console.log("Counter =", count);
+  // for (let i = 0; i < letterArray.length; i++) {
+  //   if (!letterGuessed) {
+  //     count = count + 1;
+  //   }
+  // console.log("Counter =" count);
+  // }
+  //   if (count = 7) {
+  //     return true;
+  //   } else {
+  //     return false
+  //   }
+  for (let i = 0; i < guesses.length; i++) {
+    if (guesses != letterArray) {count = count + 1}
+    console.log(guesses, count)
+  }
+  if (count === 7) {
+    return true;
+  } else {return false
+  }
 }
 
 module.exports = {
